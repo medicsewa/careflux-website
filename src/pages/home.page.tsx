@@ -33,7 +33,7 @@ const HomePage = () => {
         </p>
         <p className="mt-4 flex items-center justify-center flex-col">
           <div className="flex items-center justify-center gap-4">
-            <a href="https://apps.apple.com/app/id123456789" target="_blank">
+            <a href="https://apps.apple.com/us/app/careflux/id6743959737" target="_blank">
               <img
                 src="/appstore.webp"
                 alt="Download on the App Store"
