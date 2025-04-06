@@ -41,7 +41,7 @@ const HomePage = () => {
               />
             </a>
             <a
-              href="https://play.google.com/store/apps/details?id=com.example"
+              href="https://play.google.com/store/apps/details?id=com.medicsewa.relive"
               target="_blank"
             >
               <img
