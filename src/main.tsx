@@ -1,28 +1,25 @@
 import { StrictMode } from "react";
 import { createRoot } from "react-dom/client";
+import { HashRouter } from "react-router";
+import Application from "./application";
+
 import "./index.css";
-import { createHashRouter, RouterProvider } from "react-router";
-import HomePage from "./pages/home.page";
-import TermAndConditionPage from "./pages/term-and-condition.page";
-import PrivacyPage from "./pages/privacy.page";
 
-const router = createHashRouter([
-  {
-    path: "/",
-    element: <HomePage />,
-  },
-  {
-    path: "/terms-and-conditions",
-    element: <TermAndConditionPage />,
-  },
-  {
-    path: "/privacy-policy",
-    element: <PrivacyPage />,
-  },
-]);
+// Get the root element safely
+const rootElement = document.getElementById("root");
 
-createRoot(document.getElementById("root")!).render(
-  <StrictMode>
-    <RouterProvider router={router} />
-  </StrictMode>
-);
+// Only render if the element exists
+if (rootElement) {
+	createRoot(rootElement).render(
+		<StrictMode>
+			<div data-testid="main-container" className="main-container">
+				{/* <RouterProvider router={router} /> */}
+				<HashRouter>
+					<Application />
+				</HashRouter>
+			</div>
+		</StrictMode>,
+	);
+} else {
+	console.error("Root element not found");
+}
