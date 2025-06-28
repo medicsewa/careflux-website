@@ -1,6 +1,15 @@
 import { Link } from "react-router";
+import TagManager from "react-gtm-module";
+import { useEffect } from "react";
 
 const HomePage = () => {
+  useEffect(() => {
+    const tagManagerArgs = {
+      gtmId: "G-Q5GKCB2GNH",
+    };
+    TagManager.initialize(tagManagerArgs);
+  }, []);
+
   return (
     <div className="flex flex-col items-center w-[60%] min-w-[320px] mx-auto text-sm">
       <img src="/logo.png" className="mt-24 w-[120px] h-[120px] rounded-full" />
@@ -33,7 +42,10 @@ const HomePage = () => {
         </p>
         <p className="mt-4 flex items-center justify-center flex-col">
           <div className="flex items-center justify-center gap-4">
-            <a href="https://apps.apple.com/us/app/careflux/id6743959737" target="_blank">
+            <a
+              href="https://apps.apple.com/us/app/careflux/id6743959737"
+              target="_blank"
+            >
               <img
                 src="/appstore.webp"
                 alt="Download on the App Store"
