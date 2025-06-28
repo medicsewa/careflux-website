@@ -1,6 +1,6 @@
 import AppStoreButton from '../../components/app-store-button';
 import PlayStoreButton from '../../components/play-store-button';
-import ImageSlider from './ImageSlider';
+import ImageSlider from './image-slider';
 
 const HeroSection = () => {
   return (
